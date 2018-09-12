@@ -51,7 +51,7 @@ sudo ln -s km-0411.ini km-e0210411.ini`
 ## ROS(kinetic)インスコ
 [参考](http://ai-coordinator.jp/ubuntu-mate-ros)  
 ↑要約  
-1. 闇雲にこれ叩く（中身は公式wiki通り）
+1. 闇雲にこれ叩く（中身は公式wiki通り）  
 `sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'  
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116  
 sudo apt update  
@@ -88,7 +88,8 @@ while True:
     if key == 0x1b:  
         break  
 camera.release()  
-cv2.destroyAllWindows()```
+cv2.destroyAllWindows()
+```
 
 ## gitとgithubの設定
 [参考](https://qiita.com/0ta2/items/25c27d447378b13a1ac3)
