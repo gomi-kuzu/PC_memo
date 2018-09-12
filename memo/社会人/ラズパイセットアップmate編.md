@@ -1,4 +1,4 @@
-#ラズパイセットアップ 18/9/8
+# ラズパイセットアップ 18/9/8
   
   モデル　Rasberry Pi 3 B  
   OS　ubuntu mate 16.04  
@@ -17,7 +17,7 @@
 3. Bluemanの設定変更  
 `gsettings set org.blueman.transfer shared-path ~/Downloads`
 
-##リモート関連
+## リモート関連
 ※ipは固定していおいたほうが無難  
 ### sshで入るための設定
 [参考](https://s2jp.com/2014/01/raspberry-pi-ssh/)  
@@ -48,7 +48,7 @@ sudo ln -s km-0411.ini km-e0210411.ini`
 `sudo service xrdp restart`  
 4. winのリモートデスクトップにズパイのipぶち込んで入る
 
-##ROS(kinetic)インスコ
+## ROS(kinetic)インスコ
 [参考](http://ai-coordinator.jp/ubuntu-mate-ros)  
 ↑要約  
 1. 闇雲にこれ叩く（中身は公式wiki通り）
@@ -63,7 +63,7 @@ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc`  
 2. 確認
 `roscore`
-##OpenCVインスコ(ROS経由)
+## OpenCVインスコ(ROS経由)
 [参考](https://gbiggs.github.io/ros_moveit_rsj_tutorial/image_processing_and_opencv.html)
 ↑要約  
 1. 以下のコマンドを叩く
@@ -90,7 +90,7 @@ while True:
 camera.release()  
 cv2.destroyAllWindows()```
 
-##gitとgithubの設定
+## gitとgithubの設定
 [参考](https://qiita.com/0ta2/items/25c27d447378b13a1ac3)
 0. インスコ
 `sudo apt install git`  
