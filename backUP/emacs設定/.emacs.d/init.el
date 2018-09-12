@@ -85,4 +85,3 @@
 
 ;; globalなC-zを無効化
 (global-unset-key "\C-z")
-
