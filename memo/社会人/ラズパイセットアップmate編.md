@@ -132,4 +132,5 @@ $ git config --global user.email "メアド"
 ## その他やったこと
 aptでchromium入れたり  
 emacsインスコしたり自分の設定ファイルコピってきたり  
+raspiカメラのテスト
 etc...
