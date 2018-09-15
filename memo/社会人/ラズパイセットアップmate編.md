@@ -90,7 +90,7 @@ $ sudo apt install libopencv-dev
 3. 確認  
 USBカメラを挿して以下のようなpythonスクリプトを走らせる  
 ```python
-#!/usr/bin/env python3  
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-  
 import cv2  
 camera = cv2.VideoCapture(0)  
