@@ -1,5 +1,5 @@
 # ラズパイセットアップの自分用メモ 18/9/8
-**18/0/23**追記
+**※18/9/23追記**  
   + モデル　Rasberry Pi 3 B  
   + OS　ubuntu mate 16.04  
 
@@ -137,7 +137,7 @@ etc...
 
 ## TensorFlowのインストール（9/23追記）
 [参考](https://qiita.com/yuzo63/items/4636479c8fe3e80e14f1)  
-**ubuntu mateの場合公式のやり方では入らないっぽい**
+**ubuntu mateの場合、公式のやり方では入らないっぽいので下のやり方でインスコ**
 1. [ここ](https://github.com/lhelontra/tensorflow-on-arm/releases)からコンパイル済みのファイルを落とす  
 `$ wget https://github.com/lhelontra/tensorflow-on-arm/releases/download/v1.10.0/tensorflow-1.10.0-cp27-none-linux_armv7l.whl`  
 2. pip使ってインスコ  
