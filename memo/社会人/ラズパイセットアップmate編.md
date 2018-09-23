@@ -179,3 +179,16 @@ Hello, TensorFlow!
 42
 ```  
 ※なぜかimport時tensorflowがtab補完で出てこないがそれ以外は問題ないっぽい
+## Kerasのインストール（9/23追記）
+1. 普通にpipで  
+`$ sudo pip install keras==2.2.2`  
+**※くっそ時間かかった**  
+※しかも一回目は途中で落ちて二回目で成功（二回目は--no-cache-dirオプションを付けて実行）  
+**※十分なSwapを確保してインストールすべし**  
+2. 確認  
+Python インタプリタで  
+`>>>from keras.models import Sequential`
+とやって  
+`Using TensorFlow backend`と返ってくる  
+ここでもしtheanoと返ってくなら`~/.keras/keras.json`をエディタで開いて  
+`"backend": "theano",`の部分を`"backend": "tensorflow",`と編集する  
