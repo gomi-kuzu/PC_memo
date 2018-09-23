@@ -134,6 +134,22 @@ aptでchromium入れたり
 emacsインスコしたり自分の設定ファイルコピってきたり  
 raspiカメラのテスト  
 etc...
+## Swap領域の設定（9/23追記）
+アプリのインストール中に落ちたりするのを防ぐのにSwapを作っとく  
+[参考](https://a244.hateblo.jp/entry/2016/12/12/010429)
+1. dphys-swapfileのインストール  
+`$ sudo apt isntall dphys-swapfile`  
+2. 設定ファイル編集  
+エディタで`/etc/dphys-swapfile`を開き`CONF_SWAPSIZE`の値を変更  
+`CONF_SWAPSIZE=2048`（※2048MBのSwapに設定）  
+3. dphys-swapfileの再起動  
+```
+$ sudo systemctl stop dphys-swapfile
+$ sudo systemctl start dphys-swapfile
+```
+4. 確認  
+`$ free -h`  
+※なぜか２Gにならず1.7Gになってたけど、まあ大して変わらんかってことで放置  
 
 ## TensorFlowのインストール（9/23追記）
 [参考](https://qiita.com/yuzo63/items/4636479c8fe3e80e14f1)  
