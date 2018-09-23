@@ -1,5 +1,5 @@
 # ラズパイセットアップの自分用メモ 18/9/8
-
+**18/0/23**追記
   + モデル　Rasberry Pi 3 B  
   + OS　ubuntu mate 16.04  
 
@@ -134,3 +134,32 @@ aptでchromium入れたり
 emacsインスコしたり自分の設定ファイルコピってきたり  
 raspiカメラのテスト  
 etc...
+
+## TensorFlowのインストール（9/23追記）
+[参考](https://qiita.com/yuzo63/items/4636479c8fe3e80e14f1)  
+**ubuntu mateの場合公式のやり方では入らないっぽい**
+1. [ここ](https://github.com/lhelontra/tensorflow-on-arm/releases)からコンパイル済みのファイルを落とす  
+`$ wget https://github.com/lhelontra/tensorflow-on-arm/releases/download/v1.10.0/tensorflow-1.10.0-cp27-none-linux_armv7l.whl`  
+2. pip使ってインスコ  
+`sudo pip install --ignore-installed さっき落としたファイル`  
+※`--ignore-installed`オプションを付けてないとenum34がアンインストールできんかった的なエラーを吐いて入らんかった  
+3. 一応入った（pip listで確認）がこれだけだとimportしたときGLIBCXX_3.4.22がないとかでうまくいかんのでそれ入れる  
+```
+$ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+$ sudo apt-get update
+$ sudo apt-get install gcc-6 g++-6
+```
+4. 確認(とりあえずハロワ)  
+ipythonで  
+```
+>>> import tensorflow as tf
+>>> hello = tf.constant('Hello, TensorFlow!')
+>>> sess = tf.Session()
+>>> print(sess.run(hello))
+Hello, TensorFlow!
+>>> a = tf.constant(10)
+>>> b = tf.constant(32)
+>>> print(sess.run(a + b))
+42
+```  
+※なぜかimport時tensorflowがtab補完で出てこないがそれ以外は問題ないっぽい
